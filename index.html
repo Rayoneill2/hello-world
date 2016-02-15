@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+      <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Compozed Labs</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <!-- OLD STYLESHEET  <link href="/css/main.css" rel="stylesheet">  -->
+         <link href="css/styles.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+        <!--<style>
+            #content{ margin-top: 50px;}
+        </style>-->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+
+  <body>
+
+<div>
+     <div class="logo-bar">
+     
+     <div class="row">
+     <div class="col-md-3">
+     <a class="navbar-brand" href="/">
+              <img src="images/logo.png" alt="CompoZed Logo" />
+            </a>
+       </div>
+       
+       <div class="col-md-9">
+       
+         <nav class="navbar navbar-inverse toggle_nav">
+      <div class="container-fluid">
+     
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#accordion" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         
+   
+       
+      </div>
+    </nav>
+    
+    </div>
+    
+     
+       </div>  
+       </div>
+       
+       <div class="row hidden-sm hidden-xs">
+        <div class="hero">
+        <h1>Accelerated Delivery</h1>
+        </div>
+       </div>  
+    </div>
+       
+       
+      
+
+       
+            
+             <div class="container">
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-md-3 no-pad">
+       <!-- use panel group for accordion menu, needs data-parent to auto close -->
+
+  <div class="panel-group" id="accordion">
+       <div class="panel-heading">
+        <h4 class="panel-title">
+          <a href="index.html">OVERVIEW</a>
+        </h4>
+      </div>
+       <div class="panel-heading">
+        <h4 class="panel-title">
+          <a href="project_onboarding.html">PROJECT ONBOARDING</a>
+        </h4>
+      </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">WRITING CODE</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+           <h4 class="panel-title active"><a href="developer_workstation.html">Developer Workstation</a></h4>
+        <a href="allstate_github.html">Github</a>
+        <a href="deployingh_to_production.html">Deployment</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">DEPLOYING CODE</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body"> 
+        <div class="panel-body">
+     <a href="getting_started.html">Getting Started</a>
+        <a href="github-integration.html">Github Integration</a>
+        <a href="artifactory-integration.html">Artifactory Integration</a>
+        <a href="artifactory-integration.html">Docker as Build Environment</a>
+        <a href="cloudfoundry-integration.html">Cloud Foundry Integration</a>
+        <a href="using-rest-api.html">Jenkins REST API</a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">ARCHITECTURE</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+         <div class="panel-body">
+       <a href="security_architecture.html">Security</a>
+        <a href="dns.html">DNS</a>
+        <a href="logging_monitoring.html">Logging &amp; Monitoring</a>
+        <a href="metrics_game_plan.html">Metrics and Logging Game Plan</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+<!-- use panel group for accordion menu -->
+
+
+</div>
+<!-- nav section -->
+
+
+
+
+
+ 
+        <div class="col-md-6 white">
+         
+         
+         
+         
+          <h1 id="metrics-game-plan">Metrics Game Plan</h1>
+<hr />
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+  <li>Collect metrics for apps and infra from all AZs</li>
+  <li>Data Persistence
+    <ul>
+      <li>Do we want retention set by metric?</li>
+      <li>How much retention do we want over all?</li>
+    </ul>
+  </li>
+  <li>Dashboard
+    <ul>
+      <li>Do we want users to be able to query and create their own dashboards?</li>
+    </ul>
+  </li>
+  <li>Alert on trends
+    <ul>
+      <li>need to able to alert when an unusual trend or pattern occurs. This will need to integrate into Pager Duty?</li>
+    </ul>
+  </li>
+  <li>Multi tenancy
+    <ul>
+      <li>Is it possible in graphite?</li>
+      <li>Need central point for data store?</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="stories">Stories</h2>
+
+<ol>
+  <li>
+    <p><a href="https://www.pivotaltracker.com/story/show/107820562">[SPIKE] Research: Multiple AZs data collection/collocation </a></p>
+
+    <ul>
+      <li>Understand and document how graphite and logsearch could be integrated with our current AZs setup to show metrics from independent AZs and all AZs.</li>
+      <li>Perform and document any PoC needed.</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://www.pivotaltracker.com/story/show/107820734"> [SPIKE] Research: Data persistence and retention </a></p>
+
+    <ul>
+      <li>
+        <p>Understand and document graphite and logsearch data persistence, specifically how metris will be persisted in our setup, and how data retention can be set.</p>
+      </li>
+      <li>
+        <p>Perform and document any PoC needed.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://www.pivotaltracker.com/story/show/107820794">[SPIKE] Research: UI for metrics </a></p>
+
+    <ul>
+      <li>Understand and document how will dashing, kibana, graphana would fit in our enviroment. List capabilities of each of them. Document integration capabilities with Elasticsearch and graphite</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://www.pivotaltracker.com/story/show/107820910">[SPIKE]  Research: Alerting on metrics trends</a></p>
+
+    <ul>
+      <li>Understand and document Alerts on metrics trends with ES and graphite. Also see how those alerts can be sent to pagerduty</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://www.pivotaltracker.com/story/show/10782103">[SPIKE] Research: LDAP integraion and authorization for metrics</a></p>
+
+    <ul>
+      <li>Understand and document how LDAP can be integreated with ES and graphite. Also see how metrics can be restricted to only authorized users based on role/organization</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="future-itemsconsiderations">Future Items/Considerations</h2>
+
+<ol>
+  <li>Correlation of syslog for infrastructure - vsphere, storage, etc…</li>
+  <li>App instance counts</li>
+  <li>Monitoring syslog and performance for services - mysql, rabbitmq, redis</li>
+  <li>Events (start, stop, crash, flapping) - particularly app specific ones, particularly alerting if apps are crashing</li>
+  <li>Alerting mechanism for app owners - pagerduty (?), ESM (?)</li>
+</ol>
+
+
+
+        </div>
+
+
+
+        
+        
+        
+        <div class="col-md-3 white">
+            <div class="col-md-3 bs-docs-sidebar hidden-print hidden-sm hidden-xs fixed">
+   <div class="panel-group" id="accordion-two">
+       <div class="panel-heading">
+        <h4 class="panel-title">
+          <a href="rebuild.html">OVERVIEW</a>
+        </h4>
+      </div>
+       <div class="panel-heading">
+        <h4 class="panel-title">
+          <a href="test-page.html">PROJECT ONBOARDING</a>
+        </h4>
+      </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion-two" href="#collapse4">WRITING CODE</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse in">
+        <div class="panel-body">
+           <h4 class="panel-title active"><a href="#anchor1">link one</a></h4>
+        <a href="#anchor1">link two</a>
+        <a href="">link three</a>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion-two" href="#collapse5">DEPLOYING CODE</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body"> 
+        <div class="panel-body">
+        <a href="">link one</a>
+        <a href="">link two</a>
+        <a href="">link three</a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion-two" href="#collapse6">ARCHITECTURE</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+         <div class="panel-body">
+        <a href="">link one</a>
+        <a href="">link two</a>
+        <a href="">link three</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div> </div><!-- bs-docs-sidenav-->
+
+        </div><!-- col-md-2-->
+      </div><!-- row-->
+
+
+
+
+
+          <!-- <div class="bs-docs-footer">
+  <footer class>
+    <section class = "layout layout--middle">
+      <article class="layout__item three-quarters palm-one-whole">
+        <nav>
+          <a href="index.html">HOME</a>
+          <span class = "bullet">&nbsp; • &nbsp;</span>
+          <a href="#">SERVICE</a>
+          <span class = "bullet">&nbsp; • &nbsp;</span>
+          <a href="#">DOCUMENTATION</a>
+          <span class = "bullet">&nbsp; • &nbsp;</span>
+          <a href="#">MONITORING</a>
+          <span class = "bullet">&nbsp; • &nbsp;</span>
+          <a href="#">PRODUCTION</a>
+          <span class = "bullet">&nbsp; • &nbsp;</span>
+          <a href="#">CONTACT</a>
+        </nav>
+      </article>
+    </section>
+  </footer>
+</div>
+ -->
+    </div>
+</div>
+
+<script>
+jQuery('a').click(function(){
+   jQuery(this).toggleClass('active');
+});
+</script>
+
+<footer>
+</footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/navbar_persistence.js"</script>
+   <!-- <script src="/js/active_page.js"></script> -->
+    <script src="js/toc.js"></script>
+    <script src="js/lunr.js"></script>
+    <script src="js/search_data.js"></script>
+
+    <!--  Creating Dynamic Table of Contents -->
+    
+  </body>
+</html>
